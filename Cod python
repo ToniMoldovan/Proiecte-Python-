@@ -1,0 +1,63 @@
+import time
+import sys
+
+def start():
+	print()
+	a = float(input("Numarul = "))
+	b = float(input("Puterea = "))
+
+	print("Iti calculez acum.")
+	time.sleep(1)
+	print()
+	print("Rezultat: ",a**b)
+	print()
+	time.sleep(1)
+
+	while True:
+		print("1)Calculeaza din nou = 1")
+		print("2)Paraseste aplicatia = 2")
+		raspuns = input("->: ")
+		print()
+		if raspuns == "1":
+			print()
+			print("Cateva momente..")
+			time.sleep(1)
+			start()
+			break
+		elif raspuns == "2":
+			print("Aplicatia se va inchide.\n")
+			time.sleep(1)
+			sys.exit()
+		else:
+			print("Ai introdus ceva gresit.")
+			time.sleep(1)
+			print()
+
+print("                           -------------------------------")
+print("                     	   |Ridicarea numarului la putere|")
+print("                           -------------------------------")
+print()
+time.sleep(1)
+print("					   .......................................")
+print("					   ->Drepturi de autor: Moldovan Antonio<-")
+print("					   .......................................")
+print()
+time.sleep(1)
+print("--------------------------------------")
+print("!Formula: a la puterea b = a*a*(b)ori!")
+print("--------------------------------------")
+print()
+time.sleep(1.3)
+print("--------------------------------")
+print("|Exemplu: 5 la puterea 2 = 5*5 = 25.|")
+print("--------------------------------")
+print()
+print()
+time.sleep(1)
+
+start()
+
+
+
+
+
