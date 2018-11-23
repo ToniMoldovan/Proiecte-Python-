@@ -1,0 +1,92 @@
+import time
+import sys
+import math
+
+print("                                   ----------------------")
+print("                     	   		 ->|Ecuaţia de gradul II|<-")
+print("                                   ----------------------")
+print()
+time.sleep(1.5)
+print("					     .......................................")
+print("					     ->Drepturi de autor: Moldovan Antonio<-")
+print("					     ...............__________..............")
+print("					       .............|Toni DEV|.............   ")
+print("					     ...............----------..............")
+print()
+time.sleep(2)
+print()
+print("  ---------------------------")
+print("->|Formula: ax² + bx + c = 0|")
+print("  ---------------------------")
+time.sleep(2)
+def start():
+	print()
+	print("Introdu coeficienţii lui a, b, respectiv c.")
+	print()
+	time.sleep(1)
+
+	while True:
+		a = int(input("-> a: "))
+		b = int(input("-> b: "))
+		c = int(input("-> c: "))
+		time.sleep(0.5)
+
+		if (a!=0) and (b!=0) and (c!=0):
+			# Calculare delta.
+			d1 = b ** 2
+			d2 = 4 * a * c
+			df = d1 - d2  # <- Delta final.
+
+
+			if df < 0:
+				print("Discriminantul este mai mic decat 0, prin urmare:")
+				time.sleep(1)
+				print("Ecuaţia nu are soluţii.")
+				time.sleep(1)
+				break
+
+			elif df == 0:
+				print("Ecuaţia are o singură soluţie:")
+				print(-b + math.sqrt(df) / (2 * a))
+				time.sleep(1)
+				break
+
+			else:
+				print("x1 = ", -b + math.sqrt(df) / (2 * a))
+				time.sleep(1)
+				print("x2 = ", -b - math.sqrt(df) / (2 * a))
+				time.sleep(1)
+				break
+
+
+		else:
+			print()
+			print("!Unul dintre coeficienţi este 0.")
+			time.sleep(1)
+			print("!Ecuaţia nu se poate calcula.")
+			time.sleep(1)
+			print("!Incearcă din nou, cu mai multă atenţie!.")
+			print()
+			time.sleep(1)
+
+start()
+
+while True:
+	print()
+	print("1) Din nou = 1\n2) Închide aplicaţia = 2")
+	intrebare = input("Deci? Ce va fi?: ")
+	print()
+
+	if intrebare == "1":
+		time.sleep(1)
+		print("Te trimit acum la început!")
+		time.sleep(1)
+		start()
+	elif intrebare == "2":
+		time.sleep(1)
+		print("Aplicaţia se va închide in câteva secunde.\nLa revedere!")
+		time.sleep(2)
+		sys.exit()
+	else:
+		print("Ai introdus ceva greşit.")
+		print("Încearcă din nou.")
